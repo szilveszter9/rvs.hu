@@ -25,3 +25,14 @@ Development
 ```shell
   npm start
 ```
+
+Useful links
+------------
+* https://facebook.github.io/react/
+* http://ricostacruz.com/cheatsheets/react.html
+* http://reactcheatsheet.com/
+* https://github.com/reactjs/react-router
+* https://github.com/reactjs/react-router/tree/master/examples
+* https://github.com/facebook/flux
+* https://github.com/Flipboard/react-canvas
+* https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi

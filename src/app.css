@@ -1,0 +1,47 @@
+#page {
+  position: relative;
+  clear: left;
+}
+
+#page div {
+  position: absolute;
+}
+
+.menu--item {
+  float: left;
+  display: block;
+  margin: 3px;
+}
+
+.menu--item-Home {
+  height: 48px;
+  width: 48px;
+}
+
+.menu--item-Card,
+.menu--item-Email,
+.menu--item-Typewriter,
+.menu--item-WordGame,
+.menu--item-ImagePuzzle,
+.menu--item-ImageShuffle {
+  height: 62px;
+  width: 102px;
+}
+
+.switchTransition-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.switchTransition-enter.switchTransition-enter-active {
+  opacity: 1;
+}
+
+.switchTransition-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.switchTransition-leave.switchTransition-leave-active {
+  opacity: 0;
+}
