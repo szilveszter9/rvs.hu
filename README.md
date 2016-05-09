@@ -25,6 +25,10 @@ Development
 ```shell
   npm start
 ```
+Useful tools
+============
+* npm package dependency check: https://www.npmjs.com/package/npm-check
+* babel eslint: https://www.npmjs.com/package/babel-eslint
 
 Useful links
 ============
