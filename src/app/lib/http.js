@@ -1,7 +1,7 @@
 'use strict';
 
 export function get (url, cb) {
-  var req = new XMLHttpRequest();
+  let req = new XMLHttpRequest();
   req.onload = () =>
     req.status === 404 ?
       cb(new Error('not found')) :

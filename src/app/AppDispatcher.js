@@ -1,10 +1,9 @@
-var { Dispatcher } = require('flux');
-var { PayloadSources } = require('./Constants');
+import { Dispatcher } from 'flux';
+import { PayloadSources } from './Constants';
 
-var AppDispatcher = Object.assign(new Dispatcher(), {
-
+const AppDispatcher = Object.assign(new Dispatcher(), {
   handleServerAction (action) {
-    var payload = {
+    let payload = {
       source: PayloadSources.SERVER_ACTION,
       action: action
     };
@@ -12,7 +11,7 @@ var AppDispatcher = Object.assign(new Dispatcher(), {
   },
 
   handleViewAction (action) {
-    var payload = {
+    let payload = {
       source: PayloadSources.VIEW_ACTION,
       action: action
     };
@@ -20,6 +19,4 @@ var AppDispatcher = Object.assign(new Dispatcher(), {
   }
 });
 
-module.exports = AppDispatcher;
-
-
+export default AppDispatcher;

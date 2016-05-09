@@ -32,7 +32,7 @@ class KeyboardList extends Component {
       return <div>Loading...</div>;
     }
 
-    var keyboards = this.state.keyboardList.map(keyboard => {
+    let keyboards = this.state.keyboardList.map(keyboard => {
       return (
         <div key={keyboard.id}>
           <img src={keyboard.imageUrl}/>

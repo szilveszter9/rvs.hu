@@ -1,7 +1,7 @@
 import { ActionTypes } from '../Constants.js';
 import AppDispatcher from '../AppDispatcher.js';
 
-var ServerActionCreators = {
+const ServerActionCreators = {
   loadedKeyboardList (keyboardList) {
     AppDispatcher.handleServerAction({
       type: ActionTypes.KEYBOARDLIST_LOADED,
