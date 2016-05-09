@@ -1,12 +1,38 @@
 'use strict';
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { getJSON } from './lib/http.js';
+import { getJSON } from '../lib/http.js';
+import KeyboardListStore from '../stores/KeyboardListStore.js';
+import ViewActionCreators from '../actions/ViewActionCreators.js';
 
 class KeyboardList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { loaded: false };
+    //KeyboardListStore.getState();
+    this.handleStoreChange = this.handleStoreChange.bind(this);
+  }
+
+  componentDidMount() {
+    //this.getKeyboards();
+    KeyboardListStore.addChangeListener(this.handleStoreChange);
+    ViewActionCreators.loadKeyboardList();
+  }
+
+  componentWillUnmount () {
+    KeyboardListStore.removeChangeListener(this.handleStoreChange);
+  }
+
+  handleStoreChange () {
+    this.setState(KeyboardListStore.getState());
+  }
+
   render() {
-    console.log(this.props.data);
-    var keyboards = this.props.data.map(keyboard => {
+    if (!this.state.loaded) {
+      return <div>Loading...</div>;
+    }
+
+    var keyboards = this.state.keyboardList.map(keyboard => {
       return (
         <div key={keyboard.id}>
           <img src={keyboard.imageUrl}/>
@@ -24,31 +50,11 @@ class KeyboardList extends Component {
 }
 
 export default class Card extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {data: []};
-  }
-
-  componentDidMount() {
-    this.getKeyboards();
-  }
-
-  getKeyboards() {
-    getJSON(
-      'data/keyboardList.json',
-      (err, data) => {
-        if(err) /*if(cnt++ < 5) tryAgain*/;
-        else this.setState({ data });
-      }
-    );
-  }
-
   render() {
-    console.log('card render');
     return (
       <div>
         <h1>Card</h1>
-        <KeyboardList data={this.state.data}/>
+        <KeyboardList/>
       </div>
     );
   }
