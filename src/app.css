@@ -3,7 +3,7 @@
   clear: left;
 }
 
-#page div {
+#page > div {
   position: absolute;
 }
 
@@ -26,6 +26,9 @@
 .menu--item-ImageShuffle {
   height: 62px;
   width: 102px;
+}
+
+.keyboard--item {
 }
 
 .switchTransition-enter {

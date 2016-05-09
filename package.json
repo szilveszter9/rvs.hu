@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "browserify": "mkdir -p ./dist && browserify src/index.jsx -o dist/bundle.js -t [ babelify --presets [ es2015 react ] ]",
-    "copy:dist": "cp src/*.html dist/ && cp src/*.css dist/",
+    "copy:dist": "cp src/*.html dist/ && cp src/*.css dist/ && cp -r src/data dist/",
     "copy": "npm run copy:dist",
     "bundle": "watch 'npm run browserify && npm run copy && npm test' ./src ./test",
     "start": "http-server dist/"
