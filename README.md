@@ -27,12 +27,29 @@ Development
 ```
 
 Useful links
-------------
+============
 * https://facebook.github.io/react/
+* http://facebook.github.io/react/docs/component-specs.html
+* https://github.com/reactjs/react-tutorial/blob/master/public/scripts/example.js
+
+Cheat sheets
+------------
 * http://ricostacruz.com/cheatsheets/react.html
 * http://reactcheatsheet.com/
+
+React router
+------------
 * https://github.com/reactjs/react-router
 * https://github.com/reactjs/react-router/tree/master/examples
-* https://github.com/facebook/flux
+
+React canvas
+------------
 * https://github.com/Flipboard/react-canvas
+
+Flux
+----
+* https://github.com/facebook/flux
+
+Chrome plugin
+-------------
 * https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
