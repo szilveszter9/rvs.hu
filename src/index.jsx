@@ -1,7 +1,7 @@
 'use strict';
 'use runtime-nodent';
 
-import {App, startApp} from './App.jsx';
+import {App, startApp} from './app/components/App.jsx';
 
 
 const loadedStates = ['complete', 'loaded', 'interactive'];
