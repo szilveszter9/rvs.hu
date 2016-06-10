@@ -11,10 +11,19 @@
     "bundle": "watch 'npm run browserify && npm run copy && npm test' ./src ./test",
     "start": "http-server dist/"
   },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^6.0.4",
+    "babel-jest": "^12.0.2",
+    "babel-polyfill": "^6.8.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.3.0",
@@ -23,6 +32,7 @@
     "fast-async": "^6.0.20",
     "flux": "^2.1.1",
     "http-server": "^0.9.0",
+    "jest-cli": "^12.0.2",
     "karma": "^0.13.22",
     "karma-browserify": "^5.0.5",
     "karma-chrome-launcher": "^1.0.1",
@@ -33,6 +43,7 @@
     "mocha": "^2.4.5",
     "react": "^15.0.2",
     "react-addons-css-transition-group": "^15.0.2",
+    "react-addons-test-utils": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-router": "^2.4.0",
     "watch": "^0.18.0",

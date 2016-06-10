@@ -32,6 +32,7 @@ Useful tools
 
 Useful links
 ============
+* http://facebook.github.io/react/docs/thinking-in-react.html
 * https://facebook.github.io/react/
 * http://facebook.github.io/react/docs/component-specs.html
 * https://github.com/reactjs/react-tutorial/blob/master/public/scripts/example.js
